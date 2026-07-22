@@ -1,4 +1,4 @@
-# 🌿 FreshRoots Market
+# 🌿 Agrivo
 
 A full-stack online fresh produce delivery & pickup platform built with **React + Vite** (frontend) and **Node.js + Express + SQLite** (backend).
 

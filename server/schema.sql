@@ -1,4 +1,4 @@
--- Database Schema for Fresh Produce Market
+-- Database Schema for Agrivo
 
 CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,

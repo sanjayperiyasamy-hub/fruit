@@ -78,7 +78,7 @@ function AuthModal({ onClose, onSuccess, addToast }) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal" style={{ maxWidth: 420 }} onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2 className="modal-title">🌿 {tab === 'login' ? 'Welcome Back' : 'Join FreshRoots'}</h2>
+          <h2 className="modal-title">🌿 {tab === 'login' ? 'Welcome Back' : 'Join Agrivo'}</h2>
           <button className="btn btn-ghost" onClick={onClose}><X size={20} /></button>
         </div>
         <div className="modal-body">
@@ -356,7 +356,7 @@ function CheckoutModal({ cart, user, onClose, onSuccess, addToast }) {
                 <label className="form-label">Preferred Pickup Time</label>
                 <input className="form-input" type="datetime-local" value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} required min={new Date().toISOString().slice(0, 16)} />
                 <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-                  📍 FreshRoots Market, 100 Farmer Market Hub, Sector 14
+                  📍 Agrivo, 100 Farmer Market Hub, Sector 14
                 </p>
               </div>
             )}
@@ -851,7 +851,7 @@ export default function App() {
       <nav className="navbar">
         <div className="navbar-brand">
           <Leaf size={24} />
-          <span>FreshRoots</span>
+          <span>Agrivo</span>
         </div>
         <div className="navbar-tabs">
           <button className={`nav-tab ${view === 'shop' ? 'active' : ''}`} onClick={() => setView('shop')}>

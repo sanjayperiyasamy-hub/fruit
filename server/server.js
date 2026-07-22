@@ -315,6 +315,6 @@ app.get('/api/admin/stats', authenticateToken, requireAdmin, (req, res) => {
 
 // ─── Start Server ─────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`\n🌿 Fresh Produce Market API running at http://localhost:${PORT}`);
+  console.log(`\n🌿 Agrivo API running at http://localhost:${PORT}`);
   console.log(`   API endpoints ready. Use Ctrl+C to stop.\n`);
 });
