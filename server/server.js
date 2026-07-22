@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const path = require('path');
 const db = require('./database');
 
 const app = express();
@@ -311,6 +312,15 @@ app.get('/api/admin/stats', authenticateToken, requireAdmin, (req, res) => {
       });
     });
   });
+});
+
+// ─── STATIC FRONTEND SERVING ──────────────────────────────────────────────────
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// Anything that doesn't match an API route should serve the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
 
 // ─── Start Server ─────────────────────────────────────────────────────────────
